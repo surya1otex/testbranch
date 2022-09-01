@@ -1,0 +1,14 @@
+ALTER TABLE `tendering_negotiation_bidder_details` ADD `negotiation_status` ENUM('Y','N')  NULL DEFAULT 'N' COMMENT 'N= No,Y=Yes'
+AFTER `successful_bidder_response`;						
+				
+				
+ALTER TABLE `tendering_pre_bid` CHANGE `approval_status` `approval_status` ENUM('N','Y') 
+CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT 'N' COMMENT 'N= No,Y=Yes ';
+				
+					
+ALTER TABLE `tendering_financial_evalution_bidder_details` CHANGE `successful_bidder` `successful_bidder` ENUM('L1','L2','L3','N') 
+CHARACTER SET latin1 COLLATE latin1_swedish_ci  NULL DEFAULT 'N' COMMENT 'L1=L1,L2=L2,L3=L3,N=Not Qualified ';
+
+ALTER TABLE `tendering_technical_evalution` CHANGE `approval_status` `approval_status` ENUM('N','Y') 
+CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT 'N' COMMENT 'N= No,Y=Yes ';
+				

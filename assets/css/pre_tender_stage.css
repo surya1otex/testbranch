@@ -1,0 +1,217 @@
+.steps {
+  padding-left: 15px;
+  list-style: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  margin: 0px auto;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.steps strong {
+    font-size: 14px;
+    display: block;
+    line-height: 1.4;
+}
+
+.steps > li {
+    position: relative;
+    display: block;
+    /* border: 1px solid #ddd; */
+    padding: 12px 50px 8px 50px;
+    /* width: 250px;*/
+    height: 60px;
+}
+
+
+@media (min-width: 768px) {
+    .steps > li {
+        float: left;
+    }
+
+    .steps .past {
+        color: #333;
+        background: #FFC107;
+    }
+
+    .steps .complete {
+        color: #fff;
+        background: #4CAF50;
+    }
+
+    .steps .present {
+        color: #777;
+        background: #efefef;
+    }
+
+    .steps .future {
+        color: #777;
+        background: #efefef;
+    }
+
+    .steps li > span:after,
+    .steps li > span:before {
+        content: "";
+        display: block;
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: solid transparent;
+        border-left-color: #f0f0f0;
+        border-width: 30px;
+    }
+
+    .steps li > span:after {
+        top: -5px;
+        z-index: 1;
+        border-left-color: white;
+        border-width: 34px;
+    }
+
+    .steps li > span:before {
+        z-index: 2;
+    }
+
+    .steps li.past + li > span:before {
+        border-left-color: #FFC107;
+    }
+
+    .steps li.complete + li > span:before {
+        border-left-color: #4CAF50;
+    }
+
+    .steps li.present + li > span:before {
+        border-left-color: #efefef;
+    }
+
+    .steps li.future + li > span:before {
+        border-left-color: #efefef;
+    }
+
+    .steps li:first-child > span:after,
+    .steps li:first-child > span:before {
+        display: none;
+    }
+
+    /* Arrows at start and end */
+    .steps li:first-child i,
+    .steps li:last-child i {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: solid transparent;
+        border-left-color: white;
+        border-width: 30px;
+    }
+
+    .steps li:last-child i {
+        left: auto;
+        right: -30px;
+        border-left-color: transparent;
+        border-top-color: white;
+        border-bottom-color: white;
+    }
+}
+
+/*Model Box */
+.modal-confirm {
+    color: #636363;
+    width: 400px;
+}
+
+.modal-confirm .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+}
+
+.modal-confirm .modal-header {
+    border-bottom: none;
+    position: relative;
+}
+
+.modal-confirm h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -10px;
+}
+
+.modal-confirm .close {
+    position: absolute;
+    top: -5px;
+    right: -2px;
+}
+
+.modal-confirm .modal-body {
+    color: #999;
+}
+
+.modal-confirm .modal-footer {
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 10px 15px 25px;
+}
+
+.modal-confirm .modal-footer a {
+    color: #999;
+}
+
+.modal-confirm .icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 9;
+    text-align: center;
+    border: 3px solid #f15e5e;
+}
+
+.modal-confirm .icon-box i {
+    color: #f15e5e;
+    font-size: 46px;
+    display: inline-block;
+    margin-top: 13px;
+}
+
+.modal-confirm .btn, .modal-confirm .btn:active {
+    color: #fff;
+    border-radius: 4px;
+    background: #60c7c1;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    min-width: 120px;
+    border: none;
+    min-height: 40px;
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.modal-confirm .btn-secondary {
+    background: #c1c1c1;
+}
+
+.modal-confirm .btn-secondary:hover, .modal-confirm .btn-secondary:focus {
+    background: #a8a8a8;
+}
+
+.modal-confirm .btn-danger {
+    background: #f15e5e;
+}
+
+.modal-confirm .btn-danger:hover, .modal-confirm .btn-danger:focus {
+    background: #ee3535;
+}
+
+.trigger-btn {
+    display: inline-block;
+    margin: 100px auto;
+}
